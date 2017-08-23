@@ -7,4 +7,4 @@ build:
 	docker build -t $(IMAGE) .
 
 run:
-	docker run --init --rm --name $(NAME) $(IMAGE)
+	docker run --init --rm --name $(NAME) -p 2222:22 $(IMAGE)
