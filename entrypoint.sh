@@ -7,10 +7,7 @@ do
 	if [ -f /config/$file ]
 	then install -D -o root -g root -m600 /config/$file /etc/ssh/$file
 	fi
-done
 
-for file in $host_keys
-do
 	if [ -f /config/$file.pub ]
 	then install -D -o root -g root -m644 /config/$file.pub /etc/ssh/$file.pub
 	fi
